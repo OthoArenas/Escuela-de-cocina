@@ -1,0 +1,66 @@
+/* ----------------------------------------
+ESTILOS PARA "#menu-navegación"
+-----------------------------------------*/
+/* Quitar estilos al botón por defecto */
+#menu-navegacion .navbar-toggler {
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: 0; 
+}
+
+/* Estilo del botón personalizado */
+#menu-navegacion .boton-menu::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0c9";
+  font-weight: 900;
+  font-size: 2rem;
+  color: white; 
+}
+
+#menu-navegacion .icono-cerrar::before {
+  content: "\f00d";
+  position: relative;
+  left: 0.2rem; 
+}
+
+/* Estilo de enlaces del "#menu-navegacion"*/
+.navbar-dark .navbar-nav .nav-link {
+  padding: 1rem 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  border-radius: .5rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; 
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  font-weight: 900;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; 
+}
+
+/* Estilo HOVER de enlaces de "#menu-navegacion" */
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: white;
+  background-color: #5d6e84; 
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); 
+}
+
+/* Estilos para el enlace activo */
+.navbar-dark .navbar-nav .nav-link.active {
+  background-color: #90c448; 
+}

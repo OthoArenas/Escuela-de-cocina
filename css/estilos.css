@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/* -------------------------------------------- */
+/* ---- Hoja de Estilos personalizados CSS ---- */
+/* -------------------------------------------- */
+/* -------------------------------------------- 
+    PATRONES GENERALES
+--------------------------------------------- */
+/* -------------------------------------------- 
+1. GENERALES
+--------------------------------------------- */
+html {
+  font-size: 13px; }
+
+body {
+  font-family: 'Kodchasan', sans-serif;
+  color: black;
+  background-color: #f7f3f7;
+  z-index: -1; }
+
+.font-raleway {
+  font-family: 'Raleway', sans-serif; }
+
+.font-poiret {
+  font-family: 'Poiret One', cursive; }
+
+.font-montserrat {
+  font-family: 'Montserrat Alternates', sans-serif; }
+
+.font-kodchasan {
+  font-family: 'Kodchasan', sans-serif; }
+
+/* ----------------------------------------
+2.- ESTILOS COLOR PRINCIPAL
+-----------------------------------------*/
+.bg-primary {
+  background-color: #f46669 !important; }
+
+.text-primary {
+  color: #f46669 !important; }
+
+/* ----------------------------------------
+3.- ESTILOS COLOR SECUNDARIO
+-----------------------------------------*/
+.bg-secondary {
+  background-color: #c7c57d !important; }
+
+.text-secondary {
+  color: #c7c57d !important; }
+
+/* ----------------------------------------
+4.- ESTILOS FONDO
+-----------------------------------------*/
+.bg-light {
+  background-color: #e0d3da !important; }
+
+/* ----------------------------------------
+5.- ESTILOS BOTONES
+-----------------------------------------*/
+button:focus {
+  outline: none; }
+
+.btn {
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  font-weight: bold; }
+
+.btn-primary {
+  background-color: #f46669;
+  border-color: #f46669;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.btn-primary:hover {
+  color: #c7c57d;
+  background-color: white;
+  border-color: #f46669; }
+
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #c7c57d !important;
+  background-color: #f67e80 !important;
+  border-color: #c7c57d !important; }
+
+.btn-primary:focus {
+  color: #c7c57d !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(244, 102, 105, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(244, 102, 105, 0.5) !important; }
+
+/* Insertar la flecha del botón principal */
+.btn-primary::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f138";
+  position: relative;
+  left: 0.6rem;
+  top: 0.1rem;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease; }
+
+.btn-primary:hover::after,
+.btn-primary:active::after,
+.btn-primary:focus::after {
+  left: 0.3rem; }
+
+/* Insertar caja blanca del botón principal */
+.btn-primary::before {
+  content: "";
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in; }
+
+.btn-primary:hover::before,
+.btn-primary:focus::before,
+.btn-primary:active::before {
+  left: -15%;
+  width: 130%; }
+
+/* ----------------------------------------
+6.- ESTILOS ENCABEZADO
+-----------------------------------------*/
+header .nav-link {
+  color: black;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+header .nav-link:hover {
+  color: #f46669; }
+
+/* ----------------------------------------
+7.- ESTILOS NOSOTROS
+-----------------------------------------*/
+.imagen-superior {
+  background-image: url(../images/principal1.jpg); }
+
+.imagen-inferior {
+  background-image: url(../images/principal2.jpg); }
+
+.imagen {
+  background-size: cover;
+  background-position: top center; }
+
+#apartado-superior > div,
+#apartado-inferior > div {
+  height: 25rem; }
+
+#apartado-superior .contenido {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white; }
+
+#apartado-inferior .contenido {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+
+/* ----------------------------------------
+8.- ESTILOS ESTUDIA CON NOSOTROS
+-----------------------------------------*/
+.informacion p {
+  line-height: 1.8rem;
+  font-size: 0.9rem; }
+
+.separador::after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 100px;
+  background-image: url(../images/separador.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 20px auto 0 auto; }
+
+/* ----------------------------------------
+9.- ESTILOS CLASES
+-----------------------------------------*/
+.card .enlace {
+  color: #f46669; }
+
+.card .enlace:hover {
+  text-decoration: none;
+  color: #f79698; }
+
+.card-meta span {
+  font-weight: 700;
+  background-color: #c7c57d;
+  color: black; }
+
+.card-subtitle {
+  color: #f46669;
+  font-weight: 700;
+  margin-bottom: 1rem; }
+
+/* ----------------------------------------
+10.- ESTILOS LICENCIATURA
+-----------------------------------------*/
+#licenciatura {
+  background-image: url(../images/chef_bg.jpg);
+  background-size: cover;
+  background-position: center center; }
+
+.estudia-licenciatura {
+  height: 30rem; }
+
+/* ----------------------------------------
+11.- ESTILOS FOOTER
+-----------------------------------------*/
+#pie-de-pagina .nav-link {
+  color: black; }
+
+#pie-de-pagina .nav-link:hover {
+  color: #f46669; }
+
+/* ----------------------------------------
+x.- Media Queries
+-----------------------------------------*/
+@media (min-width: 768px) {
+  #apartado-superior > div,
+  #apartado-inferior > div {
+    height: 35rem; } }
+@media (min-width: 992px) {
+  html {
+    font-size: 16px; } }
+
+/*# sourceMappingURL=estilos.css.map */

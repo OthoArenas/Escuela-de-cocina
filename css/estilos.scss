@@ -1,0 +1,290 @@
+/* -------------------------------------------- */
+/* ---- Hoja de Estilos personalizados CSS ---- */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- 
+    PATRONES GENERALES
+--------------------------------------------- */
+
+$principal: rgb(244, 102, 105);
+$secundario: rgb(199, 197, 125);
+$texto:rgb(0, 0, 0);
+$fondo: rgb(224, 211, 218);
+$fondobody: rgb(247, 243, 247);
+
+/* -------------------------------------------- 
+1. GENERALES
+--------------------------------------------- */
+.row>*{
+    //border: 1px solid red;
+}
+
+html{
+    font-size: 13px;
+}
+
+body{
+    font-family: 'Kodchasan', sans-serif;
+    color: $texto;
+    background-color: $fondobody;
+    z-index: -1;
+}
+
+.font-raleway{
+    font-family: 'Raleway', sans-serif;
+}
+
+.font-poiret{
+    font-family: 'Poiret One', cursive;
+}
+
+.font-montserrat{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.font-kodchasan{
+    font-family: 'Kodchasan', sans-serif;
+}
+
+/* ----------------------------------------
+2.- ESTILOS COLOR PRINCIPAL
+-----------------------------------------*/
+.bg-primary{
+    background-color: $principal !important;
+}
+
+.text-primary{
+    color:$principal !important;
+}
+
+
+/* ----------------------------------------
+3.- ESTILOS COLOR SECUNDARIO
+-----------------------------------------*/
+.bg-secondary{
+    background-color: $secundario !important;
+}
+
+.text-secondary{
+    color:$secundario !important;
+}
+
+/* ----------------------------------------
+4.- ESTILOS FONDO
+-----------------------------------------*/
+.bg-light{
+    background-color: $fondo !important;
+}
+
+/* ----------------------------------------
+5.- ESTILOS BOTONES
+-----------------------------------------*/
+button:focus {
+    outline: none;
+}
+
+.btn{
+    border-radius: 2rem;
+    padding: 0.6rem 2rem;
+    font-weight: bold;
+}
+
+.btn-primary{
+    background-color: $principal;
+    border-color: $principal;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.btn-primary:hover{
+    color: $secundario;
+    background-color: white;
+    border-color: $principal;
+}
+
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: $secundario !important;
+    background-color: lighten($color: $principal, $amount: 5%) !important;
+    border-color: $secundario !important;
+}
+
+.btn-primary:focus{
+    color: $secundario !important;
+    box-shadow: 0 0 0 0.2rem rgba($color: $principal, $alpha: 0.5) !important;
+}
+
+/* Insertar la flecha del botón principal */
+
+.btn-primary::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f138";
+    position: relative;
+    left: 0.6rem;
+    top: 0.1rem;
+    transition: left .3s ease
+}
+
+.btn-primary:hover::after,
+.btn-primary:active::after,
+.btn-primary:focus::after{
+    left: 0.3rem;
+}
+
+/* Insertar caja blanca del botón principal */
+
+.btn-primary::before{
+    content: "";
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: skew(45deg);
+    transition: all 0.4s ease-in;
+}
+
+.btn-primary:hover::before,
+.btn-primary:focus::before,
+.btn-primary:active::before{
+    left: -15%;
+    width: 130%;
+}
+
+/* ----------------------------------------
+6.- ESTILOS ENCABEZADO
+-----------------------------------------*/
+header .nav-link{
+    color: $texto;
+    transition: all 0.3s ease-in-out;
+}
+
+header .nav-link:hover{
+    color: $principal;
+}
+
+/* ----------------------------------------
+7.- ESTILOS NOSOTROS
+-----------------------------------------*/
+.imagen-superior{
+    background-image: url(../images/principal1.jpg);
+}
+
+.imagen-inferior{
+    background-image: url(../images/principal2.jpg);
+}
+
+.imagen{
+    background-size: cover;
+    background-position: top center;
+}
+
+#apartado-superior > div,
+#apartado-inferior > div{
+    height: 25rem;
+}
+
+#apartado-superior .contenido{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#apartado-inferior .contenido{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/* ----------------------------------------
+8.- ESTILOS ESTUDIA CON NOSOTROS
+-----------------------------------------*/
+.informacion p{
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+}
+
+.separador::after{
+    content: '';
+    display: block;
+    width: 300px;
+    height: 100px;
+    background-image: url(../images/separador.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 20px auto 0 auto;
+}
+
+/* ----------------------------------------
+9.- ESTILOS CLASES
+-----------------------------------------*/
+.card .enlace{
+    color: $principal;
+}
+
+.card .enlace:hover{
+    text-decoration: none;
+    color: lighten($color: $principal, $amount: 10%);
+}
+
+.card-meta span{
+    font-weight: 700;
+    background-color: $secundario;
+    color: black;
+}
+
+.card-subtitle{
+    color: $principal;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* ----------------------------------------
+10.- ESTILOS LICENCIATURA
+-----------------------------------------*/
+#licenciatura{
+    background-image: url(../images/chef_bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.estudia-licenciatura{
+    height: 30rem;
+}
+
+/* ----------------------------------------
+11.- ESTILOS FOOTER
+-----------------------------------------*/
+#pie-de-pagina .nav-link{
+    color: black;
+}
+
+#pie-de-pagina .nav-link:hover{
+    color: $principal;
+}
+
+/* ----------------------------------------
+x.- Media Queries
+-----------------------------------------*/
+@media (min-width: 576px){
+
+}
+
+@media(min-width:768px){
+    #apartado-superior > div,
+    #apartado-inferior > div{
+        height: 35rem;
+    }
+}
+
+@media(min-width:992px){
+    html{
+        font-size: 16px;
+    }
+
+}
